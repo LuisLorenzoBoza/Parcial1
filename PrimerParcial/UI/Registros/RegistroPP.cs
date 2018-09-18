@@ -26,7 +26,7 @@ namespace PrimerParcial.UI.Registros
             NombrestextBox.Text = string.Empty;
             SueldonumericUpDown.Value = 0;
             PorcientoRetencionnumericUpDown.Value = 0;
-            RetencionnumericUpDown.Value = 0;
+            RetenciontextBox.Text = string.Empty;
         }
 
         private Vendedores LlenaClase()
@@ -36,7 +36,7 @@ namespace PrimerParcial.UI.Registros
             vendedor.Nombres = NombrestextBox.Text;
             vendedor.Sueldo = Convert.ToInt32(SueldonumericUpDown.Value);
             vendedor.PorcientoRetencion = Convert.ToInt32(PorcientoRetencionnumericUpDown.Value);
-            vendedor.Retencion = Convert.ToInt32(RetencionnumericUpDown.Value);
+            vendedor.Retencion = Convert.ToInt32(RetenciontextBox.Text);
             return vendedor;
         }
 
@@ -47,7 +47,7 @@ namespace PrimerParcial.UI.Registros
             NombrestextBox.Text = vendedor.Nombres;
             SueldonumericUpDown.Value = vendedor.Sueldo;
             PorcientoRetencionnumericUpDown.Value = vendedor.PorcientoRetencion;
-            RetencionnumericUpDown.Value = vendedor.Retencion;
+            RetenciontextBox.Text = vendedor.Retencion;
 
         }
 
@@ -83,11 +83,7 @@ namespace PrimerParcial.UI.Registros
                 errorProvider.SetError(PorcientoRetencionnumericUpDown, "Ingrese % de retencion");
                 paso = true;
             }
-            if (validar == 2 && RetencionnumericUpDown.Value == 0)
-            {
-                errorProvider.SetError(RetencionnumericUpDown, "Ingrese retencion");
-                paso = true;
-            }
+            
             return paso;
         }
 
@@ -180,8 +176,9 @@ namespace PrimerParcial.UI.Registros
 
         private void RetencionnumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            if (PorcientoRetencionnumericUpDown.Value != 0)
-                PorcientoRetencionnumericUpDown.Value = SueldonumericUpDown.Value * PorcientoRetencionnumericUpDown.Value / 100;
+            if ( PorcientoRetencionnumericUpDown.Value != 0)
+                RetenciontextBox.Text.Value = SueldonumericUpDown.Value * PorcientoRetencionnumericUpDown.Value / 100;
+                RetenciontextBox.Text = Retencion.ToString();
         }
     }
 }

@@ -42,12 +42,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.RetencionnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.RetenciontextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SueldonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PorcientoRetencionnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RetencionnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,23 +163,23 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // RetencionnumericUpDown
-            // 
-            this.RetencionnumericUpDown.Location = new System.Drawing.Point(98, 143);
-            this.RetencionnumericUpDown.Name = "RetencionnumericUpDown";
-            this.RetencionnumericUpDown.Size = new System.Drawing.Size(91, 20);
-            this.RetencionnumericUpDown.TabIndex = 15;
-            // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
+            // 
+            // RetenciontextBox
+            // 
+            this.RetenciontextBox.Location = new System.Drawing.Point(74, 143);
+            this.RetenciontextBox.Name = "RetenciontextBox";
+            this.RetenciontextBox.Size = new System.Drawing.Size(160, 20);
+            this.RetenciontextBox.TabIndex = 16;
             // 
             // RegistroPP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(331, 249);
-            this.Controls.Add(this.RetencionnumericUpDown);
+            this.Controls.Add(this.RetenciontextBox);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -199,7 +198,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SueldonumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PorcientoRetencionnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RetencionnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,7 +219,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.NumericUpDown RetencionnumericUpDown;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.TextBox RetenciontextBox;
     }
 }
