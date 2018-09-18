@@ -181,7 +181,7 @@ namespace PrimerParcial.UI.Registros
         private void RetencionnumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             if (PorcientoRetencionnumericUpDown.Value != 0)
-                PorcientoRetencionnumericUpDown.Value = PorcientoRetencionnumericUpDown.Value / 100;
+                PorcientoRetencionnumericUpDown.Value = SueldonumericUpDown.Value * PorcientoRetencionnumericUpDown.Value / 100;
         }
     }
 }
