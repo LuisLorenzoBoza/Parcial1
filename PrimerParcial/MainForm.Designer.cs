@@ -31,13 +31,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.estudiantesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estudiantesToolStripMenuItem1});
+            this.estudiantesToolStripMenuItem1,
+            this.toolStripMenuItem1,
+            this.consultasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -55,9 +60,29 @@
             // registroToolStripMenuItem
             // 
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
-            this.registroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registroToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.registroToolStripMenuItem.Text = "Registro";
             this.registroToolStripMenuItem.Click += new System.EventHandler(this.registroToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
+            // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vendedoresToolStripMenuItem});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // vendedoresToolStripMenuItem
+            // 
+            this.vendedoresToolStripMenuItem.Name = "vendedoresToolStripMenuItem";
+            this.vendedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vendedoresToolStripMenuItem.Text = "Vendedores";
+            this.vendedoresToolStripMenuItem.Click += new System.EventHandler(this.vendedoresToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -79,6 +104,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem estudiantesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vendedoresToolStripMenuItem;
     }
 }
 

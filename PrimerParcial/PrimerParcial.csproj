@@ -47,7 +47,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -70,6 +77,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\cVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cVendedores.Designer.cs">
+      <DependentUpon>cVendedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\RegistroPP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,9 +101,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\cVendedores.resx">
+      <DependentUpon>cVendedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroPP.resx">
       <DependentUpon>RegistroPP.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,9 +119,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Consultas\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DAL\DataBase\PrimerParcialDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

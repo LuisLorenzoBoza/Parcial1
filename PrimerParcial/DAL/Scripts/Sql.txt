@@ -1,1 +1,9 @@
-﻿
+﻿CREATE TABLE PrimerParcial
+(
+	VendedorId int primary key identity (1,1),
+	Nombres varchar(30),
+	Sueldo float,
+	PorcientoRetencion float,
+	Retencion float,
+    Fecha dateTime
+);

@@ -24,5 +24,11 @@ namespace PrimerParcial
             RegistroPP registro = new RegistroPP();
             registro.Show();
         }
+
+        private void vendedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cVendedores consulta = new cVendedores();
+            consulta.Show();
+        }
     }
 }
